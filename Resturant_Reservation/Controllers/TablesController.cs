@@ -52,7 +52,7 @@ namespace Resturant_Reservation.Controllers
         {
             try
             {
-                var item = _context.Remove(_context.Tables.FirstOrDefault(x => x.Id == id));
+                _context.Remove(_context.Tables.FirstOrDefault(x => x.Id == id));
                 _context.SaveChanges();
                 return Ok();
             }
