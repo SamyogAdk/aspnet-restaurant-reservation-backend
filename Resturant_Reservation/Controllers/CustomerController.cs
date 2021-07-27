@@ -78,6 +78,7 @@ namespace Resturant_Reservation.Controllers
             try
             {
                 _context.Customers.Remove(_context.Customers.FirstOrDefault(x => x.Id == id));
+                _context.SaveChanges();
                 return Ok("Deleted Successfully");
             }
             catch
